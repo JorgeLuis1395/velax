@@ -1,0 +1,36 @@
+import { User } from '../../auth/entities/user.entity';
+import { DetailCatalog } from '../../detail-catalog/entities/detail-catalog.entity';
+import { Driver } from '../../logistics/driver/entities/driver.entity';
+import { Company } from '../../companies/entities/company.entity';
+import { Contract } from '../../contract/contract/entities/contract.entity';
+export declare class CreateRequestDto {
+    customer: string;
+    proforma: string;
+    addressId: string;
+    user?: User;
+    withdrawalTime?: string;
+    contract: Contract | string;
+    withdrawalDate?: Date;
+    estimatedDate?: Date;
+    confirmation?: string;
+    capacityVehicle: string;
+    typeVehicle: string;
+    driver: string;
+    assistants: Driver[];
+    observation: string;
+    requirements: DetailCatalog[];
+    machinery: DetailCatalog[];
+    tools: DetailCatalog[];
+    link: string;
+    news: string;
+    status: string;
+    vehicle: string;
+    unity: string;
+    externalAddress: string;
+    confirmationLogistic: boolean;
+    company: Company | string;
+    city: string;
+    provincia: string;
+    canton: string;
+    addressBranch: string;
+}
